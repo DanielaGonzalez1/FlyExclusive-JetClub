@@ -20,6 +20,7 @@ import java.util.logging.Logger;
 
 public class Hooks {
 
+    /*Appium configuration*/
     // Set logger
     private static Logger logger = Logger.getLogger(String.valueOf(Hooks.class));
 

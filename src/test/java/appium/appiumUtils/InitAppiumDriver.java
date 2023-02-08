@@ -86,30 +86,6 @@ public class InitAppiumDriver {
         cap.setCapability("build", this.config.get("build"));
         cap.setCapability("name", this.config.get("name"));
 
-        // Set Geolocation
-        //cap.setCapability("browserstack.geoLocation", "AR");
-
-        // Set device language
-        //cap.setCapability("language", "es");
-        //cap.setCapability("locale", "AR");
-        //cap.setCapability("browserstack.gpsLocation", "-34.61315,-58.37723");
-
-        // Enable automatic screenshots for various appium commands
-        //cap.setCapability("browserstack.debug", "true");
-
-        // Set video recording
-        cap.setCapability("browserstack.video", "true");
-
-        // Set Network logs
-        //cap.setCapability("browserstack.networkLogs", "true");
-        // Set application under test
-        cap.setCapability("app", this.config.get("app"));
-        //cap.setCapability("locationServicesAuthorized", true);
-        //cap.setCapability("autoGrantPermissions", true);
-        //cap.setCapability("autoAcceptAlerts", true);
-        // Reset keyboard to its original state
-        //cap.setCapability("unicodeKeyboard", true);
-        //cap.setCapability("resetKeyboard", true);
 
 
         // Display capabilities
@@ -117,15 +93,6 @@ public class InitAppiumDriver {
 
         // Create appium driver
         AndroidDriver<MobileElement> driver = null;
-
-        // Set local driver settings
-        try {
-            String url = "http://hub.browserstack.com/wd/hub";
-            driver = new AndroidDriver(new URL(url), cap);
-            logger.info("Appium url: " + url);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
         return driver;
     }
 

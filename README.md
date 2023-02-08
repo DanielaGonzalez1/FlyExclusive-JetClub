@@ -1,244 +1,202 @@
 # Selenium Android Mobile
 
-### Resumen
-
-Este proyecto contiene el template de proyecto inicial del framework, sobre el que deben basarse las pruebas automatizadas de Mobile. Tiene como objetivo ofrecer una forma sencilla de realizar pruebas automatizadas que requieran todo el sistema en funcionamiento y comprueba sus requisitos a fondo.
 
 ### Prerequisites
 
-Para utilizar este framework es necesario poseer instalado:
+To use this framework it is necessary to have installed:
 
-1. \[Java JDK\] ([Descargar](https://www.oracle.com/cl/java/technologies/javase/jdk11-archive-downloads.html)) ya que este es un proyecto en Java.
-    * Una vez instalado, asegurarse que se encuentren configurada la variable de sistema `JAVA_HOME` y que se encuentre dentro del path.
-        * Configurar en Windows:
-            * Abir el explorador de archivos e ir a la pestaña Equipo
-            * Hacer click en Propiedades
-            * Hacer click en Configuración avanzada del sistema
-            * Hacer click en Opciones avanzadas
-            * Hacer click en variables de entorno
-            *   En la sección variables de sistema revisar que se encuentre la variable` JAVA_HOME`
-                *   Si no se encuentra hacer click en Nueva:
-                *   En nombre de variable indicar `JAVA_HOME`
-                *   En valor de la variable indicar la dirección donde se instaló el JDK (por ej: C:\java\jdk)
-                *   Hacer click en aceptar
-            *  Hacer doble click en la variable path
-            *  Revisar que entre sus líneas se encuentre `%JAVA_HOME%\bin`
-                * Si no se encuentra hacer click en Nuevo
-                * Agregar el valor `%JAVA_HOME%\bin`
+1. \[Java JDK\] ([Descargar](https://www.oracle.com/cl/java/technologies/javase/jdk11-archive-downloads.html)) since this is a Java project.
+    * Once installed, make sure that the system variable `JAVA_HOME`  is configured and that it is inside the path.
+        * Configure in Windows:
+            * Open the file explorer and go to the Computer tab.
+            * Click on Properties.
+            * Click on Advanced System Settings.
+            * Click on Advanced Options.
+            * Click on Environment Variables.
+            *  In the system variables, section check that the ` JAVA_HOME` variable is found.
+                *   If it is not found click on New:
+                *   In the variable name indicate `JAVA_HOME`
+                *   In variable value indicate the address where the JDK was installed (for example C:\java\jdk)
+                *   Click on accept
+            *  Double-click on the path variable
+            *  Check that among its lines you can find `%JAVA_HOME%\bin`
+                * If it is not found click on New
+                * Add the value `%JAVA_HOME%\bin`
 
-            *  Hacer click en Aceptar
-            *  Abrir consola de comandos
-            *  Escribir` java -version`
-                *  Deberia devolver un valor similar al siguiente  :
+            *  Click on Accept
+            *  Open command console
+            *  Type` java -version`
+                *  It should return a value similar to the following :
                ```  
                 openjdk version "11.0.16.1" 2022-08-12 LTS
                 OpenJDK Runtime Environment Corretto-11.0.16.9.1 (build 11.0.16.1+9-LTS)
                 OpenJDK 64-Bit Server VM Corretto-11.0.16.9.1 (build 11.0.16.1+9-LTS, mixed mode)
                ```
-2. \[Maven\] ([Descargar](https://maven.apache.org/download.cgi)) ya que la estructura utilizada es Maven.
-    *  Una vez instalado, asegurarse que se encuentren configurada la variable de sistema `MAVEN_HOME` y que se encuentre dentro del path.
-    *  Configurar en Windows:
-        * Abir el explorador de archivos e ir a la pestaña Equipo
-        * Hacer click en Propiedades
-        * Hacer click en Configuración avanzada del sistema
-        * Hacer click en Opciones avanzadas
-        * Hacer click en variables de entorno
-        * En la sección variables de sistema revisar que se encuentre la variabla `MAVEN_HOME`
-            *   Si no se encuentra hacer click en Nueva:
-            *   En nombre de variable indicar `MAVEN_HOME`
-            *   En valor de la variable indicar la dirección donde se instaló el MAVEN (por ej: C:\apache\maven\apache-maven-3.6.3-bin\)
-            *   Hacer click en aceptar
-        * Hacer doble click en la variable path
-        * Revisar que entre sus lineas se encuentre` %MAVEN_HOME%\bin`
-            * Si no se encuentra hacer click en Nuevo
-            * Agregar el valor ` %MAVEN_HOME%\bin`
-        * Hacer click en Aceptar
-        * Abrir consola de comandos
-        * Escribir` mvn -version`
-            *  Deberia devolver un valor similar al siguiente  :
+2. \[Maven\] ([Descargar](https://maven.apache.org/download.cgi)) since the framework used is Maven.
+    *  Once installed, make sure that the system variable `MAVEN_HOME` is configured and that it is inside the path.
+    *  Configure in Windows:
+        * Open the file explorer and go to the Computer tab.
+        * Click on Properties.
+        * Click on Advanced System Settings.
+        * Click on Advanced Options.
+        * Click on Environment Variables.
+        * In the system variables section check that the `MAVEN_HOME` variable is found.
+            *   If it is not found click on New:
+            *   In the variable name indicate `MAVEN_HOME`
+            *   In variable value indicate the address where MAVEN was installed (e.g.: C:\apache-maven-3.6.3-bin).
+            *   Click on accept.
+        * Double-click on the path variable
+        * Check that among its lines you can find ` %MAVEN_HOME%\bin`
+            * If it is not found, click on New.
+            * Add the value ` %MAVEN_HOME%%bin`
+        * Click on Accept.
+        * Open command console.
+        * Type` mvn -version`
+            *  Should return a value similar to the following :
 
     ```  
             Apache Maven 3.8.6 (84538c9988a25aec085021c365c560670ad80f63)
             Maven home: /opt/homebrew/Cellar/maven/3.8.6/libexec
-            Java version: 11.0.16.1, vendor: Amazon.com Inc., runtime: /Users/sebastian/Library/Java/JavaVirtualMachines/corretto-11.0.16.1/Contents/Home
+            Java version: 11.0.16.1, vendor: Amazon.com Inc.
             Default locale: es_419, platform encoding: US-ASCII
             OS name: "mac os x", version: "12.2.1", arch: "x86_64", family: "mac"
      ```
-3. \[IntelliJ Community\] ([Descargar](https://www.jetbrains.com/idea/download/#section=windows)) IDE para su ejecución
+3. \[IntelliJ Community\] ([Descargar](https://www.jetbrains.com/idea/download/#section=windows)) IDE 
 4. \[Appium desktop\] ([Descargar](https://github.com/appium/appium-desktop/releases/tag/v1.22.3-4))
 5. \[Appium inspector\] ([Descargar](https://github.com/appium/appium-inspector/releases))
 
-### Configuración de simuladores
+### Simulator configuration
 
 * Android
-    * \[Android Studio\] ([Descargar](https://developer.android.com/studio))  Debe ser instalado para poder emular dispositivos Android.
-        * Para crear u simulador debe entrar a la opción Configure -> AVD Manager
+    * \[Android Studio\] ([Descargar](https://developer.android.com/studio)) must be installed to be able to emulate Android devices.
+        * To create a simulator you must go to the Configure -> AVD Manager option.
+        * Within the Manager select Create Virtual Device.
+        * Select Phone in Category and a Device model.
+        * Seleccionamos un sistema operativo.
+        * Assign a name (optionally we can modify some parameters such as RAM and internal memory).
+        * Once created, we run the created simulator
 
-      ![Image text](img/001.png)
+### Appium desktop configuration
+* For this configuration we open appium and go to the "Edit Configurations" section.
+* Having entered this section we have to configure the ANDROID_HOME environment variable with the path where the android studio SDK folder is located. You can find it quickly in the More actions > Sdk Manager section of android studio.
+* Once we know this path, we copy and paste it into appium and click on "Saved and Restart".
+* The server configuration is ready, this way we can hit "startServer" so we can start the server to be able to use appium inspector with the android studio emulator. The Host and Port values are left with the default ones which are those that are seen in the image.
 
-        * Dentro del Manager seleccionamos Crear Virtual Device
-
-      ![Image text](img/002.png)
-
-        * Seleccionamos Phone en Category y un modelo de Device
-
-      ![Image text](img/003.png)
-
-        * Seleccionamos un sistema operativo
-
-      ![Image text](img/004.png)
-
-        * Asignamos un nombre.(Opcionalmente podemos modificar algunos parámetros como RAM y Memoria interna)
-
-      ![Image text](img/005.png)
-
-        * Una vez creado ejecutamos el simulador creado
-
-      ![Image text](img/006.png)
-
-      ![Image text](img/007.png)
-
-### Configuración de Appium desktop
-* Para esta configuración abrimos appium y nos vamos a la sección de “Edit Configurations”.
-  ![Image text](img/010.png)
-
-* Habiendo ingresado a dicha sección tenemos que configurar la variable de entorno ANDROID_HOME con la ruta donde se encuentra la carpeta SDK de android studio. Pueden encontrarla de manera rápida en la sección More actions > Sdk Manager de android studio.
-  ![Image text](img/011.png)
-
-* Una vez sabida esta ruta, la copiamos y pegamos en appium y le damos a “Saved and Restart”
-  ![Image text](img/012.png)
-
-* Lista la configuración del servidor, de esta manera podemos darle a “startServer” para que de esta manera levantemos el servidor para poder utilizar appium inspector con el emulador de android studio. Los valores de Host y Port se dejan con los que viene predeterminado que son los que se ven en la imagen.
-  ![Image text](img/013.png)
-
-### Configuración de Appium inspector
-* En la sección Appium Server vamos a configurar las capabilities del emulador que vamos a utilizar y la configuración para poder levantar el servidor. Para saber más sobre estas capabilities y sus funcionalidades se puede leer la documentacion de appium.
+### Appium inspector configuration
+* In the Appium Server section we are going to configure the capabilities of the emulator that we are going to use and the configuration to be able to raise the server. To know more about these capabilities and their functionalities you can read the Appium documentation.
 
     * Remote Path: /wd/hub
 
     * Json Representation:
-  {
-  "app": "C://Users//mauro//Documents//selenium-android-mobile//src//apps//qarelese25.apk",
-  "platformName": "Android",
-  "automationName": "UiAutomator2",
-  "deviceName": "emulator-5554",
-  "platformVersion": "12.0.0",
-  "udid": "emulator-5554"
-  }
-    * “App”: seteamos la ruta donde esta la apk que vamos a utilizar
-    * “platformName”: seteamos el tipo de dispositivo, en este caso Android.
-    * “automationName”: seteamos el driver a utilizar, en este caso “UiAutomator2”
-    * “deviceName”: seteamos el nombre de dispositivo, esté lo podemos sacar desde la consola de la manera explicada en la sección “Cómo saber el nombre de mi dispositivo”.
-    * “platformVersion”: seteamos la versión de Android.
-    * “Udid”: seteamos el mismo valor del nombre de dispositivo.
-      ![Image text](img/014.png)
-* Una vez realizada la configuración le damos a “Start Session” y de esta manera ya podemos usar y encontrar los localizadores para poder realizar los test.
-  ![Image text](img/015.png)
+      {
+      "app": "Route of the app",
+      "platformName": "Android",
+      "automationName": "UiAutomator2",
+      "deviceName": "emulator-5554",
+      "platformVersion": "12.0.0",
+      "udid": "emulator-5554"
+      }
+    * "App": we set the path where the apk we are going to use is located.
+    * platformName": set the type of device, in this case Android.
+      automationName": set the driver to use, in this case "UiAutomator2" * "automationName": set the driver to use, in this case "UiAutomator2" * "deviceName": set the driver to use.
+    * deviceName": set the device name, this can be obtained from the console as explained in the section "How to know the name of my device".
+    * platformVersion": set the Android version.
+    * Udid": set the same value of the device name.
+
+* Once the configuration is done we click on "Start Session" and in this way we can use and find the locators to be able to perform the tests.
 
 
+### Project installation
 
-### Instalación del proyecto
+Here's what you have to do to download and install the JetClub project
+To download it we must create a folder inside the C:/ directory.
 
-Selenium Android Mobile es un proyecto Maven, para su instalación hay que descargar el proyecto del repositorio. En este proyecto podemos encontrar features de ejemplo y como se debe utilizar el Framework.
-Para este POC el repositorio es:
-(https://gitlab.com/dualbootpartners/internal/uy/testing/selenium-android-mobile/-/tree/develop)
-
-Para poder descargarlo debemos crear una carpeta dentro del directorio C:/ (por ejemplo C:/selenium-android-mobile/)
-
-* Abrimos un terminal dentro de esa carpeta y escribimos los siguientes comandos
+* We open a terminal inside that folder and type the following commands
 
   ```
    git init
-   git clone https://gitlab.com/dualbootpartners/internal/uy/testing/selenium-android-mobile.git
+   git clone https://github.com/DanielaGonzalez1/FlyExclusive-Jetclub.git
    ```
 
-* Una vez se ha descargado abrimos el proyecto con el IDE configurado y veremos la estructura del proyecto
-    * En el directorio del proyecto buscar el archivo   `pom.xml`
-    * Le damos click derecho al archivo
-    * Hacemos click en Update Project
-    * Listo, deberían estar todas las depencias instaladas
+* Once it has been downloaded we open the project with the IDE configured and we will see the project structure
+  * In the project directory look for the file `pom.xml`.
+  * Right-click on the file
+  * Click on Update Project
+  * Ready, all the dependencies should be installed.
 
-Listo, ya deberíamos ser capaces de ejecutar los feature de ejemplos que se encuentran dentro del proyecto.
+Ready, we should now be able to run the example features found within the project.
 
-### Estructura del proyecto
+### Project structure
 
 ```  
 ├── src  
-│   ├── apps                                                  # Aqui depositaremos el binario con el que se ejecutaran las pruebas  
-│   ├── test                                                  #Suites de pruebas  
+│   ├── apps                                                  # Here we will deposit the binary with which the tests will be executed.  
+│   ├── test                                                  #Test suites  
 │   │   ├── java
 │   │   │    └── [Package del proyecto]
-│   │   │        ├── utils                                    # Carpeta con utilerias
-│   │   │        ├── apis                                     # Aqui se encuentran las clases manager para llamar a las apis
-│   │   │        ├── appiumUtils                              # Carpeta con clases para el manejo de la session de Appium y sus capabilties
-│   │   │        ├── database                                 # Aqui se encuentran las clases manager para hacer consultas en la DB
-│   │   │        ├── pageObjects                              # Aqui se depositaran todos los pages de la app
-│   │   │        │         └── page.java                      # Esta es la clase con los locators y los metodos para interactuar con el screen
-│   │   │        └── stepDefinitions                          # Aqui se depositaran todos los pagesdefinition de la app
-│   │   │                  └── [Carpeta del pagedefinition]   # Cada stepdefiniton debe tener una carpeta que la contenga
-│   │   │                     └── stepdefinition.java         # Estas clases contienen los steps definidos en los feature
+│   │   │        ├── utils                                    # Folder with utilities.
+│   │   │        ├── apis                                     # Here are the manager classes for calling the apis.
+│   │   │        ├── appiumUtils                              # Folder with classes for managing the Appium session and its capabilities.
+│   │   │        ├── database                                 # Here are the manager classes to make queries in the DB.
+│   │   │        ├── pageObjects                              # Here all the pages of the app will be deposited.
+│   │   │        │         └── page.java                      # This is the class with the locators and the methods to interact with the screen.
+│   │   │        └── stepDefinitions                          # Here will be deposited all the pagesdefinition of the app.
+│   │   │                  └── [Carpeta del pagedefinition]   # Each stepdefiniton must have a folder containing it.
+│   │   │                     └── stepdefinition.java         # These classes contain the steps defined in feature.
 │   │   ├── resources
-│   │   │   ├── features                                      # Aqui se guardaran todos los features de las pruebas
-│   │   │   │   └── example.feature
+│   │   │   ├── features                                      # All test features will be saved here.
+│   │   │   │   └── example.feature 
 │   │   │   └── properties                                    
-│   │   │      ├── database-{ambiente}.properties             # Properties para la conexion a la DB
-│   │   │      ├── apis-{ambiente}.android.properties         # Properties usada para llamar a las apis
-│   │   │      ├── browserstack-{ambiente}.android.properties # Properties para ejecutar nuestros en browserstack
-│   │   │      └── phone-{ambiente}.properties                # Properties para ejecutar nuestras pruebas en dispositivos fisicos o emulados
-└── pom.xml                                                   # Archivo que contiene las dependencias del proyecto
+│   │   │      ├── database-{ambiente}.properties             # Properties for connection to the DB.
+│   │   │      ├── apis-{ambiente}.android.properties         # Properties used to call apis.
+│   │   │      ├── browserstack-{ambiente}.android.properties # Properties to run our in browserstack
+│   │   │      └── phone-{ambiente}.properties                # Properties for running our tests on physical or emulated devices
+└── pom.xml                                                   # File containing the project dependencies
 ```
 
-### Creación de nuevos scripts
+### Creating new scripts
 
-Para generar nuevos scripts es importante mantener cierta estructura dentro del proyecto
+To generate new scripts it is important to keep certain structure within the project
 
-* Crear Feature: Debe tener un nombre descriptivo y debe estar en la carpeta correspondiente
-* Crear clase java de stepdefinition: Debe generarse una carpeta asociada dentro del package de stepdefinitions
-    * Por ejemplo
+* Create Feature: It must have a descriptive name and it must be in the corresponding folder.
+* Create java class of stepdefinition: An associated folder must be generated inside the stepdefinitions package.
+    * For example
       ```
         │    ├── stepDefinitions
         │    │    └── login 
         │    │          └── loginStepDefinitions.java
       ```
-* Crear clase java de page
-    * Por ejemplo
+* Create a java class of page
+    * For example
         ```
         │    ├── pageObjects
         │    │    └── loginPage.java
       
         ```
 
-### Ejecución
+### Execution
 
-Para correr los test se usa el siguiente comando:
+The following command is used to run the tests:
 
-mvn clean test -Denvironment={ambiente} -Dplatform={browserstack/phone} -Dcucumber.filter.tags=@Login
+mvn clean test -Denvironment={environment} -Dplatform={browserstack/phone} -Dcucumber.filter.tags=@Login
 
-Donde:
+Where:
 
-* -Dplatform= indica si los tests se van a ejecutar en un dispositivo fisico/emulado o en un dispositivo alojado en la nube (browserstack) 
-* -Denvironment= 'nombre del entorno donde se correrían los tests (QA, UAT, DEV)'
-* -Dcucumber.filter.tags="@login" por ejemplo @login para correr test referidos al login
-    * Puedes ejecutar mas de un tag de la siguiente manera:
+* -Dplatform= indicates whether the tests are to be run on a physical/emulated device or on a cloud-hosted device (browserstack).
+  -Denvironment= 'name of the environment where the tests will be run (QA, UAT, DEV)'.
+* -Dcucumber.filter.tags="@login" for example @login to run tests referring to login
+    * You can run more than one tag as follows:
         ```
         -Dcucumber.filter.tags="@login and @logout"
-        ```
-    * O Puedes excluir tags que no cumplan ciertas necesidades con:
-        ```
-        -Dcucumber.filter.tags="@login or @logout"
-        ```
 
-NOTA: Hay que estar posicionado en la consola dentro de la carpeta donde se encuentra el proyecto para ejecutar los comandos.
+NOTE: You must be positioned in the console inside the folder where the project is located to execute the commands.
 
-### Reportes
+### Reports
 
-Una vez finalizada la ejecución puedes ver el reporte en la carpeta target/allure-results:
+Once the execution is finished you can see the report in the folder target/allure-results:
 
-![Image text](img/008.png)
+And to pull up the report you must run the following commands:
 
-Y para levantar el reporte se deben correr los siguientes comandos:
-        
         ```
         allure serve target/allure-results
         ```
-![Image text](img/009.png)

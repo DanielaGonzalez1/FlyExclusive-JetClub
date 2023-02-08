@@ -10,6 +10,7 @@ import java.util.logging.Logger;
 
 public class AppiumUtils {
 
+    /*Configuration of drivers and Web driver to connect to applications*/
     private static AppiumUtils instance = null;
     protected Logger logger = Logger.getLogger(String.valueOf(getClass()));
     private AndroidDriver<MobileElement> driver;

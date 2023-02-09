@@ -32,7 +32,7 @@ To use this framework it is necessary to have installed:
                 OpenJDK Runtime Environment Corretto-11.0.16.9.1 (build 11.0.16.1+9-LTS)
                 OpenJDK 64-Bit Server VM Corretto-11.0.16.9.1 (build 11.0.16.1+9-LTS, mixed mode)
                ```
-2. \[Maven\] ([Descargar](https://maven.apache.org/download.cgi)) since the framework used is Maven.
+2. \[Maven\] ([Download](https://maven.apache.org/download.cgi)) since the framework used is Maven.
     *  Once installed, make sure that the system variable `MAVEN_HOME` is configured and that it is inside the path.
     *  Configure in Windows:
         * Open the file explorer and go to the Computer tab.
@@ -61,14 +61,14 @@ To use this framework it is necessary to have installed:
             Default locale: es_419, platform encoding: US-ASCII
             OS name: "mac os x", version: "12.2.1", arch: "x86_64", family: "mac"
      ```
-3. \[IntelliJ Community\] ([Descargar](https://www.jetbrains.com/idea/download/#section=windows)) IDE 
-4. \[Appium desktop\] ([Descargar](https://github.com/appium/appium-desktop/releases/tag/v1.22.3-4))
-5. \[Appium inspector\] ([Descargar](https://github.com/appium/appium-inspector/releases))
+3. \[IntelliJ Community\] ([Download](https://www.jetbrains.com/idea/download/#section=windows)) IDE 
+4. \[Appium desktop\] ([Download](https://github.com/appium/appium-desktop/releases/tag/v1.22.3-4))
+5. \[Appium inspector\] ([Download](https://github.com/appium/appium-inspector/releases))
 
 ### Simulator configuration
 
 * Android
-    * \[Android Studio\] ([Descargar](https://developer.android.com/studio)) must be installed to be able to emulate Android devices.
+    * \[Android Studio\] ([Download](https://developer.android.com/studio)) must be installed to be able to emulate Android devices.
         * To create a simulator you must go to the Configure -> AVD Manager option.
         * Within the Manager select Create Virtual Device.
         * Select Phone in Category and a Device model.

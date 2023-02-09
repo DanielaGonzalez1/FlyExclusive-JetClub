@@ -5,7 +5,7 @@
 
 To use this framework it is necessary to have installed:
 
-1. \[Java JDK\] ([Descargar](https://www.oracle.com/cl/java/technologies/javase/jdk11-archive-downloads.html)) since this is a Java project.
+1. \[Java JDK\] ([Download](https://www.oracle.com/cl/java/technologies/javase/jdk11-archive-downloads.html)) since this is a Java project.
     * Once installed, make sure that the system variable `JAVA_HOME`  is configured and that it is inside the path.
         * Configure in Windows:
             * Open the file explorer and go to the Computer tab.
